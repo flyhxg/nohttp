@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentRelativeLayout">
+        <attr name="Percent_layout_width" format="float"></attr>
+        <attr name="Percent_layout_height" format="float"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ImageProgressBar">
+        <attr name="progressRimColor" format="color" />
+        <attr name="progressRimWidth" format="dimension" />
+        <attr name="autoAnimationEnabled" format="boolean" />
+    </declare-styleable>
+</resources>
