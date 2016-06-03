@@ -16,7 +16,7 @@
 package com.example.hxg.demo.network;
 
 
-import com.yolanda.nohttp.Response;
+import com.yolanda.nohttp.rest.Response;
 
 /**
  * <p>接受回调结果.</p>

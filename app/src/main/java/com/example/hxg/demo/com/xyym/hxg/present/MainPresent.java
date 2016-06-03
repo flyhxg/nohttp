@@ -6,7 +6,7 @@ import com.example.commen.ui.MvpBasePresenter;
 import com.example.commen.ui.activity.BaseView;
 import com.example.hxg.demo.com.xyym.hxg.modeal.Modeal.MainModeal;
 import com.example.hxg.demo.network.HttpListener;
-import com.yolanda.nohttp.Response;
+import com.yolanda.nohttp.rest.Response;
 
 import org.json.JSONObject;
 
@@ -43,7 +43,6 @@ public class MainPresent  extends MvpBasePresenter<MainPresent.MainView> {
             public void onSucceed(int what, Response<JSONObject> response) {
                 switch (caseID) {
                     case GET_CONENT:
-
                         mMainView.getResponse(response.toString());
                         break;
 

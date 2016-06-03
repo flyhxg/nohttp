@@ -21,16 +21,15 @@ import android.content.DialogInterface;
 import com.example.hxg.demo.com.xyym.hxg.dialog.WaitDialog;
 import com.example.hxg.demo.com.xyym.hxg.util.Toast;
 import com.yolanda.nohttp.Logger;
-import com.yolanda.nohttp.OnResponseListener;
-import com.yolanda.nohttp.Request;
-import com.yolanda.nohttp.Response;
-import com.yolanda.nohttp.error.ClientError;
 import com.yolanda.nohttp.error.NetworkError;
 import com.yolanda.nohttp.error.NotFoundCacheError;
 import com.yolanda.nohttp.error.ServerError;
 import com.yolanda.nohttp.error.TimeoutError;
 import com.yolanda.nohttp.error.URLError;
 import com.yolanda.nohttp.error.UnKnownHostError;
+import com.yolanda.nohttp.rest.OnResponseListener;
+import com.yolanda.nohttp.rest.Request;
+import com.yolanda.nohttp.rest.Response;
 
 
 /**
@@ -112,7 +111,7 @@ public class HttpResponseListener<T> implements OnResponseListener<T> {
      */
     @Override
     public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
-        if (exception instanceof ClientError) {// 客户端错误
+        if (exception instanceof UnKnownHostError) {// 客户端错误
             if (responseCode == 400) {//服务器未能理解请求。
                 Toast.show("错误的请求，服务器表示不能理解。");
             } else if (responseCode == 403) {// 请求的页面被禁止
@@ -122,7 +121,8 @@ public class HttpResponseListener<T> implements OnResponseListener<T> {
             } else {// 400-417都是客户端错误，开发者可以自己去查询噢
                 Toast.show("错误的请求，服务器表示伤不起。");
             }
-        } else if (exception instanceof ServerError) {// 服务器错误
+        }
+    else if (exception instanceof ServerError) {// 服务器错误
             if (500 == responseCode) {
                 Toast.show("服务器遇到不可预知的情况。");
             } else if (501 == responseCode) {

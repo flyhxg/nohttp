@@ -18,9 +18,9 @@ package com.example.hxg.demo.network;
 import android.content.Context;
 
 import com.yolanda.nohttp.NoHttp;
-import com.yolanda.nohttp.Request;
-import com.yolanda.nohttp.RequestQueue;
 import com.yolanda.nohttp.download.DownloadQueue;
+import com.yolanda.nohttp.rest.Request;
+import com.yolanda.nohttp.rest.RequestQueue;
 
 
 /**

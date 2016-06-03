@@ -17,11 +17,10 @@ package com.example.hxg.demo.network;
 
 
 import com.example.hxg.demo.com.xyym.hxg.util.GsonUtil;
-import com.yolanda.nohttp.Headers;
-import com.yolanda.nohttp.JsonObjectRequest;
-import com.yolanda.nohttp.RequestMethod;
-import com.yolanda.nohttp.RestRequest;
-import com.yolanda.nohttp.StringRequest;
+import com.yolanda.nohttp.Headers;import com.yolanda.nohttp.RequestMethod;
+import com.yolanda.nohttp.rest.JsonObjectRequest;
+import com.yolanda.nohttp.rest.RestRequest;
+import com.yolanda.nohttp.rest.StringRequest;
 
 /**
  * <p>自定义请求对象.</p>
